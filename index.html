@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Gabriel Nogueira | Emagrecimento e Bioimpedância</title>
+  <meta name="description" content="Emagrecimento com saúde, estratégia e bioimpedância de alta precisão. Agende sua avaliação." />
+  <meta name="theme-color" content="#fbfaf8" />
+
+  <link rel="canonical" href="https://drgabrielnogueira.com.br/" />
+  <link rel="icon" href="img/hero-social.jpg" type="image/jpeg" />
+
+  <meta property="og:title" content="Dr. Gabriel Nogueira | Emagrecimento e Bioimpedância" />
+  <meta property="og:description" content="Emagrecimento com saúde, estratégia e bioimpedância de alta precisão. Agende sua avaliação." />
+  <meta property="og:url" content="https://drgabrielnogueira.com.br/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://drgabrielnogueira.com.br/img/hero-jaleco.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fbfaf8;
+      --paper: #ffffff;
+      --text-main: #1f2327;
+      --text-muted: #656b73;
+      --line: rgba(31,35,39,.10);
+      --accent: #b79a6f;       
+      --accent-2: #d9c6a8;     
+      --accent-3: #ece3d6;     
+      --shadow: 0 18px 55px rgba(16,18,20,.08);
+      --shadow-soft: 0 10px 26px rgba(16,18,20,.06);
+      --radius: 18px;
+      --radius-lg: 28px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+
+    html, body{
+      margin:0; padding:0;
+      background:
+        radial-gradient(900px 650px at 15% -10%, rgba(183,154,111,.16), transparent 58%),
+        radial-gradient(820px 580px at 95% 10%, rgba(31,35,39,.06), transparent 55%),
+        linear-gradient(180deg, #ffffff, var(--bg));
+      color:var(--text-main);
+      font-family: 'Lato', sans-serif;
+      line-height:1.7;
+      scroll-behavior:smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4{
+      font-family: 'Playfair Display', serif;
+      margin-top:0;
+      color: var(--text-main);
+      letter-spacing: -0.2px;
+    }
+
+    h1{ font-size: clamp(34px, 4vw, 52px); line-height:1.1; font-weight: 600; }
+    h2{ font-size: clamp(28px, 3.5vw, 40px); line-height:1.2; }
+    h3{ font-size: 24px; }
+    h4{ font-size: 18px; font-weight: 600; }
+
+    p { text-align: justify; margin-bottom: 1.2rem; }
+    a{ color:inherit; text-decoration:none; transition: .18s ease; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+    /* --- TOPBAR --- */
+    .topbar{
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(251,250,248,.90);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      padding: 10px 0;
+    }
+    .topbar .inner{
+      max-width: var(--max); margin: 0 auto; padding: 0 24px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand-logo{ height:auto; max-height: 55px; }
+    .nav{ display:flex; gap:22px; align-items:center; }
+    .nav a{
+      font-size: 11px; color: var(--text-muted); font-weight: 800;
+      text-transform: uppercase; letter-spacing: 1.2px;
+    }
+    .nav a:hover{ color: var(--accent); }
+
+    /* --- BOTÕES --- */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 12px 26px; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(255,255,255,.55);
+      color: var(--text-main); font-size: 12px; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 1px; cursor:pointer;
+      box-shadow: var(--shadow-soft);
+      font-family: 'Lato', sans-serif;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: var(--accent); background: #fff; }
+    .btn.primary{
+      border: 1px solid rgba(183,154,111,.55);
+      background: linear-gradient(135deg, #b79a6f, #d9c6a8);
+      color:#fff; box-shadow: 0 10px 25px rgba(183,154,111,.25);
+    }
+
+    /* --- HERO --- */
+    .hero{ padding: 80px 0 60px; }
+    .hero-grid{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items:center; }
+    .hero p.sub{ font-size: 19px; color: var(--text-muted); text-align: left; margin-bottom: 25px; }
+    
+    .badges{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 30px; }
+    .badge{
+      font-size: 10px; text-transform: uppercase; letter-spacing: 1px;
+      padding: 6px 14px; background: var(--accent-3);
+      color: #5a5e65;
+      border: 1px solid rgba(183,154,111,.2); border-radius: 999px; font-weight: 800;
+    }
+    .hero-img-container{
+      padding: 15px; border-radius: var(--radius-lg);
+      background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .hero-photo{ width: 100%; height: auto; border-radius: calc(var(--radius-lg) - 10px); display:block; object-fit: cover; }
+
+    /* --- SEÇÕES GERAIS --- */
+    section{ padding: 90px 0; border-top: 1px solid var(--line); }
+    .section-title{ text-align:center; margin-bottom: 55px; }
+    .section-title p{ 
+      color: var(--accent); font-family: 'Playfair Display', serif; 
+      font-size: 20px; font-style: italic; text-align: center; margin-top: 5px;
+    }
+
+    .grid{ display:grid; gap: 24px; }
+    .cols-3{ grid-template-columns: repeat(3,1fr); }
+    .cols-2{ grid-template-columns: repeat(2,1fr); }
+
+    .card{
+      background: #fff; padding: 35px; border: 1px solid var(--line);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-soft);
+      transition: all .2s ease;
+    }
+    .card:hover{ transform: translateY(-3px); box-shadow: var(--shadow); }
+
+    .list{ list-style:none; padding:0; margin: 0; }
+    .list li{
+      margin-bottom: 12px; color: var(--text-muted);
+      display:flex; align-items:flex-start; gap:12px; font-size: 15px;
+    }
+    .dot{
+      width:7px; height:7px; background: var(--accent);
+      border-radius:50%; margin-top: 9px; flex: 0 0 auto;
+    }
+
+    /* --- NUMERAÇÃO --- */
+    .icon-box {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--accent-3); color: var(--text-main);
+      font-weight: 700; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 15px; font-family: 'Lato', sans-serif;
+    }
+
+    /* --- BIOIMPEDANCIA --- */
+    .bia-feature {
+      background: #fff; border-radius: var(--radius-lg); overflow: hidden;
+      border: 1px solid var(--line); box-shadow: var(--shadow-soft);
+    }
+    .bia-img { width: 100%; height: 250px; object-fit: cover; display: block; }
+    .bia-content { padding: 25px; }
+
+    /* --- FORMULÁRIO --- */
+    form label {
+      display: block; font-size: 11px; text-transform: uppercase;
+      font-weight: 800; color: var(--text-muted); margin-bottom: 6px; letter-spacing: 1px;
+    }
+    form input, form select {
+      width: 100%; padding: 14px; margin-bottom: 18px;
+      border: 1px solid rgba(31,35,39,.15); border-radius: 12px;
+      background: #fff; color: var(--text-main); font-family: 'Lato', sans-serif; font-size: 16px;
+    }
+    form input:focus, form select:focus {
+      outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(183,154,111,.1);
+    }
+    .highlight-box {
+      background: var(--bg); border-left: 4px solid var(--accent);
+      padding: 25px; margin: 25px 0; border-radius: 0 12px 12px 0;
+    }
+
+    /* =========================================
+       OTIMIZAÇÃO PARA MOBILE (Max 900px)
+       ========================================= */
+    @media (max-width: 900px){
+      .wrap { padding: 0 20px; }
+      section { padding: 50px 0; }
+      .hero { padding-top: 40px; }
+      .hero-grid, .cols-2 { grid-template-columns: 1fr; }
+      .cols-3 { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; text-align: center; }
+      h2 { font-size: 28px; }
+      p { text-align: left; font-size: 15px; line-height: 1.6; }
+      .hero p.sub { text-align: center; font-size: 16px; }
+      .section-title { margin-bottom: 35px; }
+      .nav { display: none; }
+      .cta, .badges { justify-content: center; }
+      .hero-grid { gap: 30px; }
+      .hero-img-container { margin: 0 auto; max-width: 350px; }
+      #quem-sou .hero-photo { max-height: 350px; object-position: top; }
+      .card { padding: 25px 20px; }
+      .float-btn { display: flex !important; }
+    }
+    
+    .float-btn { display: none; }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <img src="img/logo-gn-dourado.png" alt="Dr. Gabriel Nogueira" class="brand-logo">
+      </div>
+      <div class="nav">
+        <a href="#bioimpedancia">Bioimpedância</a>
+        <a href="#queixas">Queixas</a>
+        <a href="#quem-sou">Quem Sou</a>
+        <a href="#avaliacoes">Depoimentos</a>
+        <a class="btn primary" id="whatsTop" href="#">Agendar</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+
+    <section class="hero" style="border-top:0;">
+      <div class="hero-grid">
+        <div>
+          <h1>Emagrecimento com ciência e dados precisos.</h1>
+          <p class="sub">
+            Deixe o “achismo” de lado. Usamos análise avançada de composição corporal para traçar metas realistas e monitorar sua evolução.
+          </p>
+          <div class="badges">
+            <div class="badge">Avaliação completa</div>
+            <div class="badge">Bioimpedância</div>
+            <div class="badge">Acompanhamento</div>
+          </div>
+          <div class="cta">
+            <a class="btn primary" id="whatsHero" href="#">Agendar avaliação</a>
+            <a class="btn" href="#bioimpedancia" style="margin-left: 10px;">Ver tecnologia</a>
+          </div>
+          <p style="font-size: 11px; color: var(--text-muted); margin-top: 25px; text-align: center; opacity: 0.8;">
+            CRM-GO 29331 / RQE 20506 • CRM-DF 30792 / RQE 25128
+          </p>
+        </div>
+        
+        <div class="hero-img-container">
+          <img class="hero-photo" src="img/hero-jaleco.jpg" alt="Dr. Gabriel Nogueira">
+        </div>
+      </div>
+    </section>
+
+    <section id="bioimpedancia">
+      <div class="section-title">
+        <h2>Bioimpedância de Alta Precisão</h2>
+        <p>Visualização da composição corporal e distribuição de massa</p>
+      </div>
+
+      <div class="grid cols-2" style="align-items: center; margin-bottom: 40px;">
+        <div class="hero-img-container" style="background: #111; border-color: #333; padding: 0;">
+           <img src="img/bia-body.webp" style="width:100%; border-radius: 20px; display:block; opacity: 0.9;" alt="Escaneamento corporal TeraScience">
+        </div>
+
+        <div>
+          <h3 style="margin-bottom: 15px; font-size: 22px;">O que a balança não conta?</h3>
+          <p>
+            Utilizo tecnologia avançada (TeraScience) para mapear sua composição corporal.
+            Não tratamos apenas “peso”: tratamos saúde metabólica, hidratação e qualidade muscular.
+          </p>
+          <ul class="list">
+            <li><span class="dot"></span><strong>Ângulo de Fase:</strong> saúde celular.</li>
+            <li><span class="dot"></span><strong>Massa muscular:</strong> ganho real.</li>
+            <li><span class="dot"></span><strong>Gordura visceral:</strong> risco metabólico.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid cols-2" style="align-items: center;">
+        <div>
+          <h3 style="margin-bottom: 15px; font-size: 22px;">Rápido e não invasivo</h3>
+          <p>
+            Exame realizado no consultório em poucos minutos.
+            Você recebe um relatório detalhado e visual para acompanhar a evolução.
+          </p>
+          
+          <div style="margin-top: 25px; text-align: left;">
+            <a class="btn primary" id="whatsBia" href="#" style="padding: 14px 24px; width: fit-content;">Agendar meu exame</a>
+          </div>
+        </div>
+
+        <div class="bia-feature">
+          <img class="bia-img" src="img/bia-exam.jpg" alt="Exame com eletrodos">
+          <div class="bia-content">
+            <h4>Tecnologia de ponta</h4>
+            <p style="margin:0; font-size: 14px; text-align: left;">
+              Sensores de alta sensibilidade para garantir dados fidedignos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="queixas">
+      <div class="section-title">
+        <h2>Identifique seu momento</h2>
+        <p>O que te impede de atingir sua melhor versão?</p>
+      </div>
+
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="icon-box">1</div>
+          <h4>Efeito sanfona</h4>
+          <p>Você emagrece, mas volta a ganhar peso. Vamos construir consistência e barreiras contra o reganho.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">2</div>
+          <h4>Ansiedade e fome</h4>
+          <p>Trabalhamos gatilhos, saciedade e estratégia alimentar para reduzir sofrimento e aumentar controle.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">3</div>
+          <h4>Metabolismo travado</h4>
+          <p>Avaliação clínica + composição corporal para identificar o que realmente está limitando seu progresso.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">4</div>
+          <h4>Sono ruim</h4>
+          <p>Sono desregulado altera fome, disposição e recuperação. Ajustamos hábitos para melhorar resultado e energia.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">5</div>
+          <h4>Desânimo excessivo</h4>
+          <p>Quando falta energia, a rotina desmorona. Investigamos causas e criamos um plano viável para recomeçar.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon-box">6</div>
+          <h4>Ambiente obesogênico</h4>
+          <p>Rotina, trabalho e contexto dificultam escolhas. Estruturamos estratégia para vencer o “ambiente”.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quem-sou">
+      <div class="section-title">
+        <h2>Quem Sou</h2>
+        <p>Ciência, Ética e Cuidado Integral</p>
+      </div>
+
+      <div class="grid cols-2" style="align-items: start; gap: 60px;">
+        <div>
+          <div style="padding:10px; border-radius: 28px; background: #fff; border:1px solid var(--line); box-shadow: var(--shadow-soft);">
+            <img class="hero-photo" src="img/hero-social.jpg" style="max-height: 520px; object-position: 50% 10%;" alt="Dr. Gabriel Nogueira">
+          </div>
+          
+          <div class="highlight-box">
+            <h4 style="font-family: 'Lato'; text-transform: uppercase; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 12px; color: var(--accent);">Formação Acadêmica</h4>
+            <p style="font-size: 13px; margin: 0; text-align: justify; line-height: 1.6; color: #555;">
+              Minha formação médica teve início na Universidade Evangélica de Goiás, seguida pela Especialização em Medicina de Família e Comunidade pela Escola de Saúde Pública do Distrito Federal. Busquei aprofundar e atualizar meus conhecimentos em obesidade e emagrecimento por meio da pós-graduação do Hospital Israelita Albert Einstein, ampliando minha atuação no cuidado integral e no acompanhamento longitudinal do paciente.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 28px; margin-bottom: 20px;">Dr. Gabriel Nogueira Silva</h3>
+          
+          <p>
+            A medicina é sobre pessoas. Sobre escutar, acompanhar e transformar histórias.
+          </p>
+
+          <p>
+            Atuo com foco em prevenção de doenças, tratamento da obesidade e demais doenças crônicas, unindo ciência, ética e cuidado integral para promover saúde real e resultados sustentáveis.
+          </p>
+
+          <p>
+            Cuidar de forma integral é entender que cada pessoa é mais do que um diagnóstico. É sobre acompanhar histórias, não apenas sintomas. Minha missão é transformar o emagrecimento em um processo sustentável, com foco em <strong>Saúde Metabólica</strong>, unindo tecnologia de ponta à individualidade do paciente.
+          </p>
+
+          <p>
+            O "achismo" dá lugar a dados. Com a bioimpedância, ajustamos finamente dieta e treino para preservar massa muscular e perder gordura com segurança.
+          </p>
+
+          <div style="margin-top: 30px;">
+             <a class="btn primary" href="#contato">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avaliacoes">
+      <div class="section-title">
+        <h2>Experiências</h2>
+        <p>Relatos de pacientes</p>
+      </div>
+      <div class="grid cols-3">
+        <div class="card"><p>"Plano claro e sem extremismos. Consegui encaixar na rotina."</p><strong>– Paciente M.S.</strong></div>
+        <div class="card"><p>"A bioimpedância me deu clareza sobre o que mudar."</p><strong>– Paciente L.F.</strong></div>
+        <div class="card"><p>"Atendimento humano e muito técnico."</p><strong>– Paciente R.A.</strong></div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <div class="section-title">
+        <h2>Agende sua consulta</h2>
+        <p>Online ou presencial em Anápolis</p>
+      </div>
+
+      <div class="grid cols-2">
+        <div class="card">
+          <h4 style="margin-bottom: 14px;">Clínica Dentale</h4>
+          <p style="color: var(--text-muted); margin-bottom: 18px; text-align: left;">
+            R. Quatorze de Julho, 129, Centro<br>
+            Anápolis – GO, 75043-040
+          </p>
+
+          <div style="border: 1px solid rgba(31,35,39,.08); padding: 5px; background: rgba(255,255,255,.85); border-radius: 18px; margin-bottom: 20px;">
+            <iframe title="Mapa" src="https://maps.google.com/maps?q=Rua+Quatorze+de+Julho,+129,+Anapolis+GO&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="200" style="border:0; display:block; filter: grayscale(100%); border-radius: 14px;"
+              loading="lazy"></iframe>
+          </div>
+
+          <a class="btn primary" id="whatsEndereco" href="#" style="width: 100%;">Agendar no WhatsApp</a>
+        </div>
+
+        <div class="card">
+          <form id="leadForm">
+            <label for="nome">Nome Completo</label>
+            <input id="nome" type="text" required placeholder="Digite seu nome" />
+
+            <label for="tel">WhatsApp</label>
+            <input id="tel" type="tel" required placeholder="(62) 9xxxx-xxxx" />
+
+            <label for="objetivo">Interesse</label>
+            <select id="objetivo" required>
+              <optgroup label="Interesse">
+                <option value="Emagrecimento Geral" selected>Emagrecimento geral</option>
+                <option value="Exame de Bioimpedância">Exame de bioimpedância</option>
+                <option value="Ganho de Massa">Ganho de massa</option>
+                <option value="Melhorar Exames">Melhorar exames</option>
+                <option value="Acompanhar Doenças">Acompanhar doenças</option>
+                <option value="Renovar Receitas">Renovar receitas</option>
+                <option value="Laudo Médico">Laudo médico</option>
+              </optgroup>
+
+              <optgroup label="O que está te dificultando?">
+                <option value="Dificuldade: Efeito Sanfona">Dificuldade: Efeito sanfona</option>
+                <option value="Dificuldade: Ansiedade e Fome">Dificuldade: Ansiedade e fome</option>
+                <option value="Dificuldade: Metabolismo Travado">Dificuldade: Metabolismo travado</option>
+                <option value="Dificuldade: Sono Ruim">Dificuldade: Sono ruim</option>
+                <option value="Dificuldade: Desânimo Excessivo">Dificuldade: Desânimo excessivo</option>
+                <option value="Dificuldade: Ambiente Obesogênico">Dificuldade: Ambiente obesogênico</option>
+              </optgroup>
+            </select>
+
+            <button class="btn primary" style="width: 100%; margin-top: 10px;" type="submit">
+              ENVIAR NO WHATSAPP
+            </button>
+            <div style="margin-top: 15px; font-size: 11px; color: var(--text-muted); text-align: center;">
+              Ao enviar, você concorda com contato para agendamento.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="padding: 40px 0; background: #fff; border-top: 1px solid var(--line); text-align: center; font-size: 12px; color: var(--text-muted);">
+    <div class="wrap">
+      <p style="text-align:center; margin:0;"><strong>Dr. Gabriel Nogueira</strong></p>
+      <p style="text-align:center; margin:5px 0 0;">CRM-GO 29331 | RQE 20506</p>
+    </div>
+  </footer>
+
+  <div class="float-btn" style="position: fixed; bottom: 0; left: 0; right: 0; padding: 15px; background: rgba(255,255,255,0.95); border-top: 1px solid rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); z-index: 999;">
+    <div style="font-size: 12px; font-weight: bold; color: var(--text-main);">Agende agora</div>
+    <a href="#" id="whatsFloat" class="btn primary" style="padding: 10px 20px; font-size: 11px;">WhatsApp</a>
+  </div>
+
+  <script>
+    const CONFIG = {
+      whatsappNumber: "5562920009293",
+      baseMessage: "Olá, Dr. Gabriel! Gostaria de saber mais sobre o acompanhamento."
+    };
+
+    function waLink(message){
+      return "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(message);
+    }
+
+    ["whatsTop","whatsHero","whatsEndereco", "whatsFloat"].forEach(id=>{
+      const el = document.getElementById(id);
+      if(el) el.href = waLink(CONFIG.baseMessage);
+    });
+
+    const btnBia = document.getElementById("whatsBia");
+    if(btnBia) {
+      btnBia.href = waLink("Olá! Gostaria de agendar meu exame de bioimpedância.");
+    }
+
+    document.getElementById("leadForm").addEventListener("submit", (e)=>{
+      e.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const tel = document.getElementById("tel").value;
+      const select = document.getElementById("objetivo");
+      const obj = select.value;
+      const composed = `Olá! Vim pelo site.\n\n*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*Interesse/Dificuldade:* ${obj}`;
+      window.location.href = waLink(composed);
+    });
+  </script>
+</body>
+</html>
