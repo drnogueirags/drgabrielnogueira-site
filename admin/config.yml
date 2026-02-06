@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: drnogueirags/drgabrielnogueira-site
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "conteudo"
+    label: "Conteúdo do Site"
+    files:
+      - name: "home"
+        label: "Página Inicial"
+        file: "dados/home.json"
+        fields:
+          - {label: "Título Principal", name: "titulo_hero", widget: "string"}
+          - {label: "Subtítulo", name: "subtitulo_hero", widget: "text"}
+          - {label: "Texto Sobre Mim", name: "texto_sobre", widget: "markdown"}
